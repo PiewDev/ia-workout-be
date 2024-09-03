@@ -126,18 +126,12 @@ const generationConfig = {
   },
 };
 
-async function generateRoutine(prompt) {
-  console.log('prompt', prompt)
-  const chatSession = model.startChat({
-    generationConfig
-    });
-
-  const result = await chatSession.sendMessage(prompt);
-  console.log(result.response.text());
- 
-  return JSON.parse(result.response.text());
-  
+async function chatSession() {
+  const session = await model.startChat({
+    generationConfig,
+  });
+  return session;
 }
 
-export default generateRoutine;
+export default chatSession;
 

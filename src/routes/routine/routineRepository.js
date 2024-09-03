@@ -1,8 +1,19 @@
-import generateRoutine from "../../prompGeneration/generateRoutine.mjs";
+import chatSession from "../../prompGeneration/ia.mjs";
+
 
 export class RoutineRepository {
+  constructor() {
+    this.chatSession = chatSession();
+  }
+
   async generateRoutine(prompt) {
-    const routine = await generateRoutine(prompt);
-    return routine;
+    try {
+      const chatSession = await this.chatSession;
+      const routine = await chatSession.sendMessage(prompt);
+      return JSON.parse(routine.response.text());
+    } catch (error) {
+      console.error("Error generating routine:", error);
+      throw new Error("Failed to generate routine");
+    }
   }
 }

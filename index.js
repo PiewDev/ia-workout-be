@@ -1,5 +1,3 @@
-import generatePrompt from './src/prompGeneration/generatePromp.js';
-import generateRoutine from './src/prompGeneration/generateRoutine.mjs';
 import express from 'express';
 import cors from 'cors';
 import { createQuestionsRouter } from './src/routes/questions/questionsRoutes.js';
@@ -18,15 +16,10 @@ app.use(cors({
 app.use(express.json());
 
 // Ruta principal
-
 app.use('/questions', createQuestionsRouter());
-
 app.use('/prompt', createPromptRouter());
-
 app.use('/routine',createRoutineRouter());
 
-
-// Escuchar en el puerto especificado
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
