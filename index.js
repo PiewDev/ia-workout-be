@@ -1,8 +1,10 @@
-import getQuestions from './src/questions/getQuestions.js';
 import generatePrompt from './src/prompGeneration/generatePromp.js';
 import generateRoutine from './src/prompGeneration/generateRoutine.mjs';
 import express from 'express';
 import cors from 'cors';
+import { createQuestionsRouter } from './src/routes/questions/questionsRoutes.js';
+import { createPromptRouter } from './src/routes/prompt/promptRoutes.js';
+import { createRoutineRouter } from './src/routes/routine/routineRoutes.js';
 const app = express();
 const port = 3000;
 app.options('*', cors());
@@ -17,38 +19,11 @@ app.use(express.json());
 
 // Ruta principal
 
-app.get('/questions', (req, res) => {
-  var flujo = getQuestions();
-  res.json(flujo);
-});
+app.use('/questions', createQuestionsRouter());
 
-app.post('/prompt', (req, res) => {
-  const data = req.body;
+app.use('/prompt', createPromptRouter());
 
-  // Validación básica (puedes agregar más validaciones según sea necesario)
-  if (!Array.isArray(data) || data.length === 0) {
-      return res.status(400).json({ error: 'Invalid input data' });
-  }
-
-  var prompt = generatePrompt(data);
-  res.json(prompt);
-});
-
-app.post('/routine', async (req, res) => {
-  const data = req.body;
-  console.log(data);
-  // Validación básica (puedes agregar más validaciones según sea necesario)
-  if (!Array.isArray(data) || data.length === 0) {
-      return res.status(400).json({ error: 'Invalid input data' });
-  }
-
-  var prompt = generatePrompt(data);
-  var routine = await generateRoutine(prompt)
-
-  console.log(routine);
-  res.json(routine);
-});
-
+app.use('/routine',createRoutineRouter());
 
 
 // Escuchar en el puerto especificado

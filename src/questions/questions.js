@@ -1,4 +1,4 @@
-import { QUESTIONS_KEYS, QUESTION_TYPES } from "../constants.js"; 
+import { QUESTIONS_KEYS, QUESTION_TYPES } from "../utils/constants.js"; 
 
 const questions = {
     [QUESTIONS_KEYS.TRAINING_LEVEL]: {

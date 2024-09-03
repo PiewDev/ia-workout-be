@@ -1,4 +1,4 @@
-import { QUESTIONS_KEYS, PRINCIPAL_OPTIONS,TRAINING_LEVELS } from "../constants.js"; 
+import { QUESTIONS_KEYS, PRINCIPAL_OPTIONS,TRAINING_LEVELS } from "../utils/constants.js"; 
 const messages = {
     [PRINCIPAL_OPTIONS.CURRENTLY_TRAINING]: (props) => 
             `Necesito que me generes una rutina de entrenamiento para un ${getLevel(props[QUESTIONS_KEYS.MONTHS_TRAINING])} que ya entrena hace ${props[QUESTIONS_KEYS.MONTHS_TRAINING]} meses y que desea ${props[QUESTIONS_KEYS.TRAINING_FOCUS]}.`,
