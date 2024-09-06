@@ -3,7 +3,7 @@ import chatSession from "../../prompGeneration/ia.mjs";
 
 export class RoutineRepository {
   constructor() {
-    this.chatSession = chatSession();
+    this.initChatSession = chatSession();
   }
 
   async generateRoutine(prompt) {
