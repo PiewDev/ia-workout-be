@@ -1,6 +1,5 @@
-import fs from 'fs';
-import flow from './flow.js'
-import questions from './questions.js'
+import flow from './questions/flow.js'
+import questions from './questions/questions.js'
 
 function insertQuestions(flow) {
     if (flow.id) {
@@ -26,8 +25,11 @@ function insertQuestions(flow) {
     }
 }
 
-// Function to insert the questions into the flow using the IDs
-export default function getQuestions() {
+export class QuestionsService {
+  constructor () {}
+
+  getQuestions = () => {
     insertQuestions(flow);
     return flow;
+  }
 }
