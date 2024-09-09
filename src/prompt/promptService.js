@@ -1,4 +1,4 @@
-import { QUESTIONS_KEYS, PRINCIPAL_OPTIONS,TRAINING_LEVELS } from "../../utils/constants.js";
+import { QUESTIONS_KEYS, PRINCIPAL_OPTIONS,TRAINING_LEVELS } from "../utils/constants.js";
 
 const messages = {
     [PRINCIPAL_OPTIONS.CURRENTLY_TRAINING]: (props) => 

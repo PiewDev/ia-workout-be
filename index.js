@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import { createQuestionsRouter } from './src/routes/questions/questionsRoutes.js';
-import { createPromptRouter } from './src/routes/prompt/promptRoutes.js';
-import { createRoutineRouter } from './src/routes/routine/routineRoutes.js';
+import { createQuestionsRouter } from './src/questions/questionsRoutes.js';
+import { createPromptRouter } from './src/prompt/promptRoutes.js';
+import { createRoutineRouter } from './src/routine/routineRoutes.js';
 const app = express();
 const port = 3000;
 app.options('*', cors());
