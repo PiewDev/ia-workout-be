@@ -1,4 +1,4 @@
-import chatSession from "../../prompGeneration/ia.mjs";
+import chatSession from "../prompGeneration/ia.mjs";
 
 
 export class RoutineRepository {
@@ -8,7 +8,7 @@ export class RoutineRepository {
 
   async generateRoutine(prompt) {
     try {
-      const chatSession = await this.chatSession;
+      const chatSession = await this.initChatSession;
       const routine = await chatSession.sendMessage(prompt);
       return JSON.parse(routine.response.text());
     } catch (error) {
