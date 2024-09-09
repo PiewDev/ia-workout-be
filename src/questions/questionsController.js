@@ -1,7 +1,7 @@
 import { QuestionsService } from './questionsService.js';
 
 export class QuestionsController {
-  constructor() {
+  constructor () {
     this.questionsService = new QuestionsService();
     this.getQuestions = this.getQuestions.bind(this);
   }
@@ -13,5 +13,5 @@ export class QuestionsController {
     } catch (error) {
       return res.status(500).json({ error: 'Error fetching questions' });
     }
-  }
+  };
 }
