@@ -8,9 +8,8 @@ const QUESTIONS_KEYS = {
 
 const QUESTION_TYPES = {
   OPTIONS: 'options',
-  NUMERIC_INPUT: 'numeric-input',
+  MONTHS_SELECTOR: 'month-selector',
   TEXT_INPUT: 'text-input'
-
 };
 
 const TRAINING_LEVELS = {
