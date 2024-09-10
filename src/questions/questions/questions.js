@@ -11,14 +11,14 @@ const questions = {
     limit: 200
   },
   [QUESTIONS_KEYS.MONTHS_TRAINING]: {
-    question: '¿Cuántos meses entrenaste?',
+    question: '¿Cuánto tiempo entrenaste?',
     type: QUESTION_TYPES.MONTHS_SELECTOR,
-    placeholder: 'Ingrese cantidad de meses'
+    placeholder: 'Ingrese tiempo.'
   },
   [QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING]: {
     question: '¿Cuánto tiempo estuviste sin entrenar?',
     type: QUESTION_TYPES.MONTHS_SELECTOR,
-    placeholder: 'Ingrese cantidad de meses/años'
+    placeholder: 'Ingrese tiempo.'
   }
 };
 
