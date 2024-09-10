@@ -12,12 +12,12 @@ const questions = {
   },
   [QUESTIONS_KEYS.MONTHS_TRAINING]: {
     question: '¿Cuántos meses entrenaste?',
-    type: QUESTION_TYPES.NUMERIC_INPUT,
+    type: QUESTION_TYPES.MONTHS_SELECTOR,
     placeholder: 'Ingrese cantidad de meses'
   },
   [QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING]: {
     question: '¿Cuánto tiempo estuviste sin entrenar?',
-    type: QUESTION_TYPES.NUMERIC_INPUT,
+    type: QUESTION_TYPES.MONTHS_SELECTOR,
     placeholder: 'Ingrese cantidad de meses/años'
   }
 };
