@@ -1,9 +1,7 @@
 import {
-  GoogleGenerativeAI,
-  HarmCategory,
-  HarmBlockThreshold,
-} from "@google/generative-ai"
-import { systemInstruction } from "../utils/googleSistemInstructions.js";
+  GoogleGenerativeAI
+} from '@google/generative-ai';
+import { systemInstruction } from '../utils/googleSistemInstructions.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -11,8 +9,8 @@ const apiKey = process.env.GOOGLE_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-pro",
-  systemInstruction: systemInstruction
+  model: 'gemini-1.5-pro',
+  systemInstruction
 });
 
 const generationConfig = {
@@ -20,118 +18,117 @@ const generationConfig = {
   topP: 0.95,
   topK: 64,
   maxOutputTokens: 8192,
-  responseMimeType: "application/json",
+  responseMimeType: 'application/json',
   responseSchema: {
-    type: "object",
+    type: 'object',
     properties: {
       plan: {
-        type: "object",
+        type: 'object',
         properties: {
           name: {
-            type: "string"
+            type: 'string'
           },
           planType: {
-            type: "string"
+            type: 'string'
           },
           about: {
-            type: "string"
+            type: 'string'
           },
           daysPeerWeek: {
-            type: "string"
+            type: 'string'
           },
           weeks: {
-            type: "array",
+            type: 'array',
             items: {
-              type: "object",
+              type: 'object',
               properties: {
                 weekNumber: {
-                  type: "integer"
+                  type: 'integer'
                 },
                 weekPurpose: {
-                  type: "string"
+                  type: 'string'
                 },
                 days: {
-                  type: "array",
+                  type: 'array',
                   items: {
-                    type: "object",
+                    type: 'object',
                     properties: {
                       day: {
-                        type: "string"
+                        type: 'string'
                       },
                       exercises: {
-                        type: "array",
+                        type: 'array',
                         items: {
-                          type: "object",
+                          type: 'object',
                           properties: {
                             name: {
-                              type: "string"
+                              type: 'string'
                             },
                             sets: {
-                              type: "integer"
+                              type: 'integer'
                             },
                             reps: {
-                              type: "integer"
+                              type: 'integer'
                             },
                             weight: {
-                              type: "number"
+                              type: 'number'
                             },
                             RIR: {
-                              type: "integer"
+                              type: 'integer'
                             },
                             PRPercent: {
-                              type: "string"
+                              type: 'string'
                             },
                             notes: {
-                              type: "string"
+                              type: 'string'
                             }
                           },
                           required: [
-                            "name",
-                            "sets",
-                            "reps",
-                            "weight",
-                            "RIR",
-                            "notes"
+                            'name',
+                            'sets',
+                            'reps',
+                            'weight',
+                            'RIR',
+                            'notes'
                           ]
                         }
                       }
                     },
                     required: [
-                      "day",
-                      "exercises"
+                      'day',
+                      'exercises'
                     ]
                   }
                 }
               },
               required: [
-                "weekNumber",
-                "weekPurpose",
-                "days"
+                'weekNumber',
+                'weekPurpose',
+                'days'
               ]
             }
           }
         },
         required: [
-          "name",
-          "planType",
-          "about",
-          "daysPeerWeek",
-          "weeks"
+          'name',
+          'planType',
+          'about',
+          'daysPeerWeek',
+          'weeks'
         ]
       }
     },
     required: [
-      "plan"
+      'plan'
     ]
-  },
+  }
 };
 
-async function chatSession() {
+async function chatSession () {
   const session = await model.startChat({
-    generationConfig,
+    generationConfig
   });
   return session;
 }
 
 export default chatSession;
-

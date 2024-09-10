@@ -18,7 +18,7 @@ app.use(express.json());
 // Ruta principal
 app.use('/questions', createQuestionsRouter());
 app.use('/prompt', createPromptRouter());
-app.use('/routine',createRoutineRouter());
+app.use('/routine', createRoutineRouter());
 
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);

@@ -2,7 +2,7 @@ import { PromptService } from '../prompt/promptService.js';
 import { RoutineRepository } from './routineRepository.js';
 
 export class RoutineService {
-  constructor() {
+  constructor () {
     this.promptService = new PromptService();
     this.routineRepository = new RoutineRepository();
   }
@@ -15,5 +15,5 @@ export class RoutineService {
     const prompt = await this.promptService.getPrompt(data);
     const routine = await this.routineRepository.generateRoutine(prompt);
     return routine;
-  }
+  };
 }
