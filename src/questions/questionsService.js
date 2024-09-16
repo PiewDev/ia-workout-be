@@ -1,3 +1,4 @@
+import { QUESTIONS_KEYS } from '../utils/constants.js';
 import flow from './questions/flow.js';
 import questions from './questions/questions.js';
 
@@ -6,7 +7,7 @@ function insertQuestions (flow) {
     const question = questions[flow.id];
     if (question) {
       flow.question = question.question;
-      flow.type = question.type;
+      flow.input = question.input;
       if (question.limit) {
         flow.limit = question.limit;
       }
@@ -24,8 +25,8 @@ function insertQuestions (flow) {
     });
   }
 
-  if (flow.next && flow.next.questions) {
-    flow.next.questions.forEach(insertQuestions);
+  if (flow.id === QUESTIONS_KEYS.NEXT) {
+    flow.questions.forEach(insertQuestions);
   }
 }
 
