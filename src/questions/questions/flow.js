@@ -1,4 +1,5 @@
-import { QUESTIONS_KEYS, QUESTION_TYPES, PRINCIPAL_OPTIONS } from '../../utils/constants.js';
+import { QUESTIONS_KEYS, QUESTION_TYPES, PRINCIPAL_OPTIONS, TITLES } from '../../utils/constants.js';
+
 const trainingData = {
   id: QUESTIONS_KEYS.TRAINING_LEVEL,
   type: QUESTION_TYPES.OPTIONS,
@@ -8,8 +9,7 @@ const trainingData = {
       next: {
         questions: [
           {
-            id: QUESTIONS_KEYS.TRAINING_FOCUS,
-            next: null
+            id: QUESTIONS_KEYS.TRAINING_FOCUS
           }
         ]
       }
@@ -19,15 +19,15 @@ const trainingData = {
       next: {
         questions: [
           {
-            id: QUESTIONS_KEYS.MONTHS_TRAINING,
-            next: {
-              questions: [
-                {
-                  id: QUESTIONS_KEYS.TRAINING_FOCUS,
-                  next: null
-                }
-              ]
-            }
+            id: QUESTIONS_KEYS.MONTHS_TRAINING
+          },
+          {
+            id: QUESTIONS_KEYS.NEXT,
+            questions: [
+              {
+                id: QUESTIONS_KEYS.TRAINING_FOCUS
+              }
+            ]
           }
         ]
       }
@@ -37,23 +37,22 @@ const trainingData = {
       next: {
         questions: [
           {
-            id: QUESTIONS_KEYS.MONTHS_TRAINING,
-            next: {
-              questions: [
-                {
-                  id: QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING,
-                  next: {
-
-                    questions: [
-                      {
-                        id: QUESTIONS_KEYS.TRAINING_FOCUS,
-                        next: null
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
+            id: QUESTIONS_KEYS.MONTHS_TRAINING
+          },
+          {
+            id: QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING
+          },
+          {
+            id: QUESTIONS_KEYS.TITLE,
+            title: TITLES.TRAINING_TIME
+          },
+          {
+            id: QUESTIONS_KEYS.NEXT,
+            questions: [
+              {
+                id: QUESTIONS_KEYS.TRAINING_FOCUS
+              }
+            ]
           }
         ]
       }
