@@ -1,4 +1,4 @@
-import { QUESTIONS_KEYS } from '../utils/constants.js';
+import { QUESTIONS_KEYS } from '../constants/questionsConstants.js';
 import flow from './questions/flow.js';
 import questions from './questions/questions.js';
 

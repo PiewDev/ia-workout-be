@@ -9,7 +9,11 @@ export class PromptController {
   getPrompt = async (req, res) => {
     try {
       const data = req.body;
-      const prompt = await this.promptService.getPrompt(data);
+      const responses = {};
+      data.forEach(item => {
+        responses[item.questionId] = item.answer;
+      });
+      const prompt = await this.promptService.getPrompt(responses);
       return res.json(prompt);
     } catch (error) {
       res.status(400).json({ error: 'Invalid input data' });

@@ -22,12 +22,6 @@ const QUESTION_TYPES = {
   TEXT_INPUT: 'text-input'
 };
 
-const TRAINING_LEVELS = {
-  BEGGINER: 'Principiante',
-  ADVANCED: 'Avanzado',
-  MEDIUM: 'Intermedio'
-};
-
 const PRINCIPAL_OPTIONS = {
   BEGINNER: 'Estoy por empezar',
   CURRENTLY_TRAINING: 'Ya entreno',
@@ -42,8 +36,7 @@ const TITLES = {
 export {
   QUESTIONS_KEYS,
   QUESTION_TYPES,
-  PRINCIPAL_OPTIONS,
-  TRAINING_LEVELS,
   QUESTIONS,
+  PRINCIPAL_OPTIONS,
   TITLES
 };
