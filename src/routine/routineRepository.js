@@ -1,4 +1,4 @@
-import chatSession from '../Ia/iaRepository.js';
+import chatSession from '../ia/iaRepository.js';
 
 export class RoutineRepository {
   constructor () {
