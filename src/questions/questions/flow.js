@@ -1,61 +1,91 @@
-import { QUESTIONS_KEYS, QUESTION_TYPES, PRINCIPAL_OPTIONS, TITLES } from '../../constants/questionsConstants.js';
+import { QUESTIONS_KEYS, QUESTION_TYPES, TRAINING_LEVEL_OPTIONS, TITLES, TRANING_PLACE_OPTIONS } from '../../constants/questionsConstants.js';
 
 const trainingData = {
-  id: QUESTIONS_KEYS.TRAINING_LEVEL,
-  type: QUESTION_TYPES.OPTIONS,
-  options: [
+  questions: [
     {
-      text: PRINCIPAL_OPTIONS.BEGINNER,
-      next: {
-        questions: [
-          {
-            id: QUESTIONS_KEYS.TRAINING_FOCUS
-          }
-        ]
-      }
-    },
-    {
-      text: PRINCIPAL_OPTIONS.CURRENTLY_TRAINING,
-      next: {
-        questions: [
-          {
-            id: QUESTIONS_KEYS.MONTHS_TRAINING
-          },
-          {
-            id: QUESTIONS_KEYS.NEXT,
+      id: QUESTIONS_KEYS.TRAINING_LEVEL,
+      type: QUESTION_TYPES.OPTIONS,
+      options: [
+        {
+          text: TRAINING_LEVEL_OPTIONS.BEGINNER,
+          next: {
             questions: [
               {
                 id: QUESTIONS_KEYS.TRAINING_FOCUS
               }
             ]
           }
-        ]
-      }
-    },
-    {
-      text: PRINCIPAL_OPTIONS.RETAKE,
-      next: {
-        questions: [
-          {
-            id: QUESTIONS_KEYS.MONTHS_TRAINING
-          },
-          {
-            id: QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING
-          },
-          {
-            id: QUESTIONS_KEYS.TITLE,
-            title: TITLES.TRAINING_TIME
-          },
-          {
-            id: QUESTIONS_KEYS.NEXT,
+        },
+        {
+          text: TRAINING_LEVEL_OPTIONS.CURRENTLY_TRAINING,
+          next: {
             questions: [
               {
-                id: QUESTIONS_KEYS.TRAINING_FOCUS
+                id: QUESTIONS_KEYS.MONTHS_TRAINING
+              },
+              {
+                id: QUESTIONS_KEYS.NEXT,
+                questions: [
+                  {
+                    id: QUESTIONS_KEYS.TRAINING_FOCUS
+                  }
+                ]
               }
             ]
           }
-        ]
-      }
+        },
+        {
+          text: TRAINING_LEVEL_OPTIONS.RETAKE,
+          next: {
+            questions: [
+              {
+                id: QUESTIONS_KEYS.MONTHS_TRAINING
+              },
+              {
+                id: QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING
+              },
+              {
+                id: QUESTIONS_KEYS.TITLE,
+                title: TITLES.TRAINING_TIME
+              },
+              {
+                id: QUESTIONS_KEYS.NEXT,
+                questions: [
+                  {
+                    id: QUESTIONS_KEYS.TRAINING_FOCUS
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      id: QUESTIONS_KEYS.NEXT,
+      questions: [
+        {
+          id: QUESTIONS_KEYS.TRANING_PLACE,
+          type: QUESTION_TYPES.OPTIONS,
+          options: [
+            {
+              text: TRANING_PLACE_OPTIONS.HOME,
+              next: {
+                questions: [
+                  {
+                    id: QUESTIONS_KEYS.TRAINING_EQUIPMENT
+                  }
+                ]
+              }
+            },
+            {
+              text: TRANING_PLACE_OPTIONS.GYM
+            }
+          ]
+        }
+
+      ]
+
     }
   ]
 };

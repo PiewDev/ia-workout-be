@@ -1,10 +1,16 @@
+const BASE_KEYS = {
+  NEXT: 'next',
+  TITLE: 'title'
+};
+
 const QUESTIONS_KEYS = {
+  ...BASE_KEYS,
   TRAINING_LEVEL: 'trainingLevel',
   TRAINING_FOCUS: 'trainingFocus',
   MONTHS_TRAINING: 'monthsTraining',
   MONTHS_WITHOUT_TRAINING: 'monthsWithuotTraining',
-  NEXT: 'next',
-  TITLE: 'title'
+  TRAINING_EQUIPMENT: 'trainingEquipment',
+  TRANING_PLACE: 'trainingPlace'
 
 };
 
@@ -22,11 +28,16 @@ const QUESTION_TYPES = {
   TEXT_INPUT: 'text-input'
 };
 
-const PRINCIPAL_OPTIONS = {
+const TRAINING_LEVEL_OPTIONS = {
   BEGINNER: 'Estoy por empezar',
   CURRENTLY_TRAINING: 'Ya entreno',
   RETAKE: 'Voy a retomar'
 
+};
+
+const TRANING_PLACE_OPTIONS = {
+  HOME: 'En casa',
+  GYM: 'En el gym'
 };
 
 const TITLES = {
@@ -37,6 +48,7 @@ export {
   QUESTIONS_KEYS,
   QUESTION_TYPES,
   QUESTIONS,
-  PRINCIPAL_OPTIONS,
-  TITLES
+  TRAINING_LEVEL_OPTIONS,
+  TITLES,
+  TRANING_PLACE_OPTIONS
 };
