@@ -1,10 +1,9 @@
-import { QUESTIONS_KEYS, QUESTION_TYPES, TRAINING_LEVEL_OPTIONS, TITLES, TRANING_PLACE_OPTIONS } from '../../constants/questionsConstants.js';
+import { QUESTIONS_KEYS, TRAINING_LEVEL_OPTIONS, TITLES, TRANING_PLACE_OPTIONS } from '../../constants/questionsConstants.js';
 
 const trainingData = {
   questions: [
     {
       id: QUESTIONS_KEYS.TRAINING_LEVEL,
-      type: QUESTION_TYPES.OPTIONS,
       options: [
         {
           text: TRAINING_LEVEL_OPTIONS.BEGINNER,
@@ -66,7 +65,6 @@ const trainingData = {
       questions: [
         {
           id: QUESTIONS_KEYS.TRANING_PLACE,
-          type: QUESTION_TYPES.OPTIONS,
           options: [
             {
               text: TRANING_PLACE_OPTIONS.HOME,

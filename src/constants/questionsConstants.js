@@ -18,14 +18,17 @@ const QUESTIONS = {
   TRAINING_LEVEl: '¿Cuál es tu nivel de entrenamiento?',
   TRAINING_FOCUS: '¿En qué te gustaría enfocar el entrenamiento?',
   MONTHS_TRAINING: '¿Cuánto tiempo entrenaste?',
-  MONTHS_WITHOUT_TRAINING: '¿Cuánto tiempo estuviste sin entrenar?'
+  MONTHS_WITHOUT_TRAINING: '¿Cuánto tiempo estuviste sin entrenar?',
+  TRAINING_EQUIPMENT: '¿Qué equipo tienes para entrenar?',
+  TRANING_PLACE: '¿En donde vas a entrenar?'
 
 };
 
 const QUESTION_TYPES = {
   OPTIONS: 'options',
   MONTHS_SELECTOR: 'month-selector',
-  TEXT_INPUT: 'text-input'
+  TEXT_INPUT: 'text-input',
+  EQUIPMENT_PICKER: 'equipment-picker'
 };
 
 const TRAINING_LEVEL_OPTIONS = {
