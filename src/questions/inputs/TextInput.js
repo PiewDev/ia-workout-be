@@ -1,4 +1,4 @@
-import { QUESTION_TYPES } from '../../utils/constants.js';
+import { QUESTION_TYPES } from '../../constants/questionsConstants.js';
 
 import BaseInput from './BaseInput.js';
 

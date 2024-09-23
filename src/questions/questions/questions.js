@@ -1,5 +1,5 @@
 // @ts-check
-import { QUESTIONS, QUESTIONS_KEYS } from '../../utils/constants.js';
+import { QUESTIONS, QUESTIONS_KEYS } from '../../constants/questionsConstants.js';
 import MonthsInput from '../inputs/MonthsInput.js';
 import OptionsInput from '../inputs/OptionsInput.js';
 import TextInput from '../inputs/TextInput.js';

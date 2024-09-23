@@ -1,18 +1,3 @@
-import {
-  GoogleGenerativeAI
-} from '@google/generative-ai';
-import { systemInstruction } from '../utils/googleSistemInstructions.js';
-import dotenv from 'dotenv';
-dotenv.config();
-
-const apiKey = process.env.GOOGLE_KEY;
-const genAI = new GoogleGenerativeAI(apiKey);
-
-const model = genAI.getGenerativeModel({
-  model: 'gemini-1.5-pro',
-  systemInstruction
-});
-
 const generationConfig = {
   temperature: 1,
   topP: 0.95,
@@ -124,11 +109,4 @@ const generationConfig = {
   }
 };
 
-async function chatSession () {
-  const session = await model.startChat({
-    generationConfig
-  });
-  return session;
-}
-
-export default chatSession;
+export default generationConfig;

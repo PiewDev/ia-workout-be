@@ -1,4 +1,4 @@
-import chatSession from '../prompGeneration/ia.mjs';
+import chatSession from '../ia/iaRepository.js';
 
 export class RoutineRepository {
   constructor () {
