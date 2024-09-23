@@ -4,8 +4,8 @@ import { isValidString } from '../utils/validations.js';
 
 export class PromptService {
   getPrompt = async (responses) => {
-    if (!Array.isArray(responses) || responses.length === 0) {
-      throw new Error('Invalid input data');
+    if (!responses) {
+      throw new Error('Invalid responses');
     }
 
     const prompt = messages[responses[QUESTIONS_KEYS.TRAINING_LEVEL]](responses);

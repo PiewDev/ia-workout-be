@@ -8,7 +8,7 @@ export class RoutineService {
   }
 
   getRoutine = async (data) => {
-    if (!Array.isArray(data) || data.length === 0) {
+    if (!data) {
       throw new Error('Invalid input data');
     }
 
