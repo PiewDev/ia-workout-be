@@ -26,7 +26,7 @@ const QUESTIONS = {
 
 const QUESTION_TYPES = {
   OPTIONS: 'options',
-  MONTHS_SELECTOR: 'month-selector',
+  MONTHS_SELECTOR: 'months-selector',
   TEXT_INPUT: 'text-input',
   EQUIPMENT_PICKER: 'equipment-picker'
 };
