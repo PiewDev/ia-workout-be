@@ -1,5 +1,6 @@
 // @ts-check
 import { QUESTIONS, QUESTIONS_KEYS } from '../../constants/questionsConstants.js';
+import EquipmentPicker from '../inputs/EquipmentPicker.js';
 import MonthsInput from '../inputs/MonthsInput.js';
 import OptionsInput from '../inputs/OptionsInput.js';
 import TextInput from '../inputs/TextInput.js';
@@ -22,6 +23,14 @@ const questions = {
   [QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING]: {
     question: QUESTIONS.MONTHS_WITHOUT_TRAINING,
     input: new MonthsInput()
+  },
+  [QUESTIONS_KEYS.TRAINING_EQUIPMENT]: {
+    question: QUESTIONS.TRAINING_EQUIPMENT,
+    input: new EquipmentPicker()
+  },
+  [QUESTIONS_KEYS.TRANING_PLACE]: {
+    question: QUESTIONS.TRANING_PLACE,
+    input: new OptionsInput()
   }
 };
 
