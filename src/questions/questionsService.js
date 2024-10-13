@@ -13,7 +13,6 @@ function insertQuestions (flow) {
     }
     if (element?.input?.type === QUESTION_TYPES.OPTIONS) {
       element.options.forEach(option => {
-        console.log(option.text, 'option');
         if (option.next) {
           insertQuestions(option.next);
         }
@@ -24,13 +23,11 @@ function insertQuestions (flow) {
 
 export class QuestionsService {
   getQuestions = () => {
-    console.log(flow, 'flow');
     try {
       insertQuestions(flow);
     } catch (error) {
       console.log(error);
     }
-    console.log(flow, 'flow2');
     return flow;
   };
 }

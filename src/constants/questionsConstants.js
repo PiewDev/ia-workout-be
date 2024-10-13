@@ -11,7 +11,6 @@ const QUESTIONS_KEYS = {
   MONTHS_WITHOUT_TRAINING: 'monthsWithuotTraining',
   TRAINING_EQUIPMENT: 'trainingEquipment',
   TRANING_PLACE: 'trainingPlace'
-
 };
 
 const QUESTIONS = {
@@ -21,7 +20,6 @@ const QUESTIONS = {
   MONTHS_WITHOUT_TRAINING: '¿Cuánto tiempo estuviste sin entrenar?',
   TRAINING_EQUIPMENT: '¿Qué equipo tienes para entrenar?',
   TRANING_PLACE: '¿En donde vas a entrenar?'
-
 };
 
 const QUESTION_TYPES = {
@@ -35,7 +33,6 @@ const TRAINING_LEVEL_OPTIONS = {
   BEGINNER: 'Estoy por empezar',
   CURRENTLY_TRAINING: 'Ya entreno',
   RETAKE: 'Voy a retomar'
-
 };
 
 const TRANING_PLACE_OPTIONS = {
