@@ -3,18 +3,6 @@ import { QUESTIONS_KEYS, TRAINING_LEVEL_OPTIONS } from '../constants/questionsCo
 
 const messages = {
   [TRAINING_LEVEL_OPTIONS.CURRENTLY_TRAINING]: (props) => {
-<<<<<<< Updated upstream
-    const { trainingFocus, monthsTraining, level } = extractProps(props);
-    return `Necesito que me generes una rutina de entrenamiento para un ${level} que ya entrena hace ${monthsTraining} meses y que desea ${trainingFocus}.`;
-  },
-  [TRAINING_LEVEL_OPTIONS.BEGINNER]: (props) => {
-    const { trainingFocus } = extractProps(props);
-    return `Necesito que me generes una rutina de entrenamiento para alguien que se está iniciando que desea ${trainingFocus}.`;
-  },
-  [TRAINING_LEVEL_OPTIONS.RETAKE]: (props) => {
-    const { trainingFocus, monthsTraining, monthsWithoutTraining, level } = extractProps(props);
-    return `Necesito que me generes una rutina de entrenamiento para un ${level} que entrenó ${monthsTraining} meses pero está sin entrenar hace ${monthsWithoutTraining} meses y que desea ${trainingFocus}.`;
-=======
     const { trainingFocus, monthsTraining, level, equipment } = extractProps(props);
     return `Necesito que me generes una rutina de entrenamiento para un ${level} que ya entrena hace ${monthsTraining} meses y que desea ${trainingFocus}, el equipo que tiene disponible es: ${equipment}.`;
   },
@@ -25,7 +13,6 @@ const messages = {
   [TRAINING_LEVEL_OPTIONS.RETAKE]: (props) => {
     const { trainingFocus, monthsTraining, monthsWithoutTraining, level, equipment } = extractProps(props);
     return `Necesito que me generes una rutina de entrenamiento para un ${level} que entrenó ${monthsTraining} meses pero está sin entrenar hace ${monthsWithoutTraining} meses y que desea ${trainingFocus}, el equipo que tiene disponible es: ${equipment}.`;
->>>>>>> Stashed changes
   }
 };
 
