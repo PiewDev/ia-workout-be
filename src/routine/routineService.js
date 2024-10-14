@@ -13,6 +13,7 @@ export class RoutineService {
     }
 
     const prompt = await this.promptService.getPrompt(data);
+    console.log('prompt', prompt);
     const routine = await this.routineRepository.generateRoutine(prompt);
     return routine;
   };

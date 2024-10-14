@@ -1,4 +1,4 @@
-import { QUESTIONS_KEYS, TRAINING_LEVEL_OPTIONS, TITLES, TRANING_PLACE_OPTIONS } from '../../constants/questionsConstants.js';
+import { QUESTIONS_KEYS, TRAINING_LEVEL_OPTIONS, TITLES, TRANING_PLACE_OPTIONS, SEX_OPTIONS } from '../../constants/questionsConstants.js';
 
 const trainingData = {
   questions: [
@@ -79,6 +79,33 @@ const trainingData = {
             {
               text: TRANING_PLACE_OPTIONS.GYM
             }
+          ]
+        },
+        {
+          id: QUESTIONS_KEYS.NEXT,
+          questions: [
+            {
+              id: QUESTIONS_KEYS.SELECT_HEIGHT
+            },
+            {
+              id: QUESTIONS_KEYS.SELECT_WEIGHT
+            },
+            {
+              id: QUESTIONS_KEYS.SELECT_SEX,
+              options: [
+                {
+                  text: SEX_OPTIONS.FEMALE
+                },
+                {
+                  text: SEX_OPTIONS.MALE
+                }
+              ]
+            },
+            {
+              id: QUESTIONS_KEYS.TITLE,
+              title: TITLES.PERSONAL_DATA
+            }
+
           ]
         }
 
