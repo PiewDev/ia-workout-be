@@ -20,9 +20,13 @@ function extractProps (props) {
   const trainingFocus = props[QUESTIONS_KEYS.TRAINING_FOCUS];
   const monthsTraining = props[QUESTIONS_KEYS.MONTHS_TRAINING];
   const monthsWithoutTraining = props[QUESTIONS_KEYS.MONTHS_WITHOUT_TRAINING];
+  const sex = props[QUESTIONS_KEYS.SELECT_SEX];
+  const height = props[QUESTIONS_KEYS.SELECT_HEIGHT];
+  const weight = props[QUESTIONS_KEYS.SELECT_WEIGHT];
   const level = getLevel(props[QUESTIONS_KEYS.MONTHS_TRAINING]);
   const equipment = getEquipment(props[QUESTIONS_KEYS.TRAINING_EQUIPMENT]);
-  return { trainingFocus, monthsTraining, monthsWithoutTraining, level, equipment };
+  const personalData = `un humano ${level} de sexo ${sex} que mide ${height}cm y pesa ${weight}kg`;
+  return { trainingFocus, monthsTraining, monthsWithoutTraining, level, equipment, sex, height, weight, personalData };
 }
 
 function getEquipment (list) {

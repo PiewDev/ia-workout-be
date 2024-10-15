@@ -2,6 +2,7 @@
 import { QUESTIONS, QUESTIONS_KEYS } from '../../constants/questionsConstants.js';
 import EquipmentPicker from '../inputs/EquipmentPicker.js';
 import MonthsInput from '../inputs/MonthsInput.js';
+import NumericInput from '../inputs/NumericInput.js';
 import OptionsInput from '../inputs/OptionsInput.js';
 import TextInput from '../inputs/TextInput.js';
 
@@ -31,6 +32,24 @@ const questions = {
   [QUESTIONS_KEYS.TRANING_PLACE]: {
     question: QUESTIONS.TRANING_PLACE,
     input: new OptionsInput()
+  },
+  [QUESTIONS_KEYS.SELECT_SEX]: {
+    question: QUESTIONS.SELECT_SEX,
+    input: new OptionsInput()
+  },
+  [QUESTIONS_KEYS.SELECT_WEIGHT]: {
+    question: QUESTIONS.SELECT_WEIGHT,
+    input: new NumericInput({
+      placeholder: 'Kg',
+      maxLength: 3
+    })
+  },
+  [QUESTIONS_KEYS.SELECT_HEIGHT]: {
+    question: QUESTIONS.SELECT_HEIGHT,
+    input: new NumericInput({
+      placeholder: 'Cm',
+      maxLength: 3
+    })
   }
 };
 
